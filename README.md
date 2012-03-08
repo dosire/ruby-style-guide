@@ -173,6 +173,16 @@ You can generate a PDF or an HTML copy of this guide using
         subject: 'Important message',
         body: source.text)
     end
+    
+    # Comcoaster style (normal indent with closing on a new line to prevent indenting a lot)
+    def send_mail(source)
+      Mailer.deliver(
+        to: 'bob@example.com',
+        from: 'us@example.com',
+        subject: 'Important message',
+        body: source.text
+      )
+    end
 
     # bad (double indent)
     def send_mail(source)
